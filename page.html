@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+     <!-- css -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css">
+     <!-- js -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- thempfy -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lykmapipo/themify-icons@0.1.2/css/themify-icons.css">
+    <!-- awesome -->
+     <script src="https://kit.fontawesome.com/820f95221d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <section class="poster">
+     <div class="container-fluid text-center pt-5 "> 
+        <div class="fixed-header bg-dark w-100 py-3">
+          <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+
+            <!-- Brand -->
+            <h1 class="text-danger mb-0 text-center text-md-start">Hollywood-Hub.com</h1>
+
+            <!-- Navigation Links -->
+            <ul class="list-inline mb-0 d-flex flex-wrap gap-3 justify-content-center align-items-center">
+              <li class="list-inline-item"><a href="./index.html" class="text-light text-decoration-none">Home</a></li>
+              <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">About</a></li>
+              <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Webseries</a></li>
+              <li class="list-inline-item"><a href="#" class="text-light text-decoration-none">Movies</a></li>
+
+              <!-- Dropdown -->
+              <li class="list-inline-item">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown">HD Movies</button>
+                  <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item text-danger">720p Movies</a>
+                    <a href="#" class="dropdown-item text-danger">1080p Movies</a>
+                    <a href="#" class="dropdown-item text-danger">4K Movies</a>
+                    <hr class="dropdown-divider">
+                    <a href="#" class="dropdown-item text-danger">
+                      Online <span class="badge bg-dark text-danger">New <span class="badge bg-light text-dark">2</span></span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <!-- Search Bar -->
+            <div class="w-md-50 w-s-35">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for a movie..." id="movieSearchInput">
+                <button class="btn btn-danger" type="button" onclick="searchMovies()">Search</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+         <!-- No Results Message -->
+        <div class="text-light text-center mb-3" id="noResultsMessage" style="display: none;">
+            <p class="text-white fs-2 fw-bold">No such movie found.</p>
+        </div>
+
+   <div class="movie-wrapper">
+       <div class="movie_list">
+
+        <div class="movie-card">
+          <div class="card">
+            <img src="./fast5.jpg"  class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title text-start">Fast 5</h5>
+
+              <div class="category__rating text-warning text-start py-1">
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+              </div>
+
+              <h6 class="text-start"> About</h6>
+              <p class="card-text text-start">
+                Fast 5 is a media franchise centered on a series of action films that are largely concerned with illegal street racing, heists, spies and family. 
+                The franchise also includes short films, a television series, live shows, video games and theme park attractions. It is distributed by Universal Pictures.</p>
+                <button type="button" class="btn btn-dark btn-center">Download</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="card">
+              <img src="./f6.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-start">Fast 6</h5>
+                <div class="category__rating text-warning text-start py-1">
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star-half.png"/>
+
+                </div>
+                <h6 class="text-start">About</h6>
+                <p class="card-text text-start"> Fast 6 is a media franchise centered on a series of action films that are largely concerned with illegal street racing, heists, spies and family. The franchise also includes short films, a television series, live shows, video games and theme park attractions. It is distributed by Universal Pictures.</p>
+                <button type="button" class="btn btn-dark btn-center">Download</button>
+              </div>
+            </div>
+        </div>
+
+        <div class="movie-card">
+            <div class="card">
+              <img src="./fast7.jpg"  class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-start">Furious 7</h5>
+
+                <div class="category__rating text-warning text-start py-1">
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                <img src="https://img.icons8.com/fluency/20/000000/star-half.png"/>
+
+
+                   
+                </div>
+
+                <h6 class="text-start">About</h6>
+                <p class="card-text text-start">F7 is a media franchise centered on a series of action films that are largely concerned with illegal street racing, heists, spies and family. The franchise also includes short films, a television series, live shows, video games and theme park attractions. It is distributed by Universal Pictures..</p>
+                <button type="button" class="btn btn-dark btn-center">Download</button>
+              </div>
+            </div>            
+        </div>
+         
+        <div class="movie-card">
+            <div class="card">
+              <img src="./f8.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-start">F8</h5>
+
+                <div class="category__rating text-warning text-start py-1">
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star-half.png"/>
+    
+    
+                </div>
+                <h6 class="text-start"> About</h6>
+                <p class="card-text text-start">F8 is a media franchise centered on a series of action films that are largely concerned with illegal street racing, heists, spies and family. The franchise also includes short films, a television series, live shows, video games and theme park attractions. It is distributed by Universal Pictures.</p>
+                <button type="button" class="btn btn-dark btn-center">Download</button>
+              </div>
+            </div>           
+        </div>
+
+        <div class="movie-card">
+            <div class="card">
+              <img src="./f9.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title text-start">F9</h5>
+
+                <div class="category__rating text-warning text-start py-1">
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star.png"/>
+                    <img src="https://img.icons8.com/fluency/20/000000/star-half.png"/>
+    
+    
+                </div>
+                <h6 class="text-start"> About</h6>
+                <p class="card-text text-start">
+                  F9 (also known as F9: The Fast Saga or Fast & Furious 9) is a 2021 action film directed by Justin Lin, who co-wrote the screenplay with Daniel Casey.[7] It is the ninth installment and the sequel to The Fate of the Furious (2017) and the overall tenth installment in the Fast & Furious franchise. 
+                </p>
+                <button type="button" class="btn btn-dark btn-center">Download</button>
+              </div>
+            </div>           
+        </div>
+       </div>
+   </div>
+    <ul class="pagination  justify-content-center bg-dark py-5 pt-1">
+        <li class="page-item"><a href="index.html" class="page-link text-center">&laquo;</a></li>
+        <li class="page-item"><a href="index.html" class="page-link text-center">1</a></li>
+        <li class="page-item active"><a href="./page.html" class="page-link text-center">2</a></li>
+        <li class="page-item disabled"><a href="./index.html" class="page-link text-center">&raquo;</a></li>
+        </ul>
+     </div>
+   </section>
+    
+      <!-- Search Script -->
+      <script>
+      function searchMovies() {
+          const input = document.getElementById("movieSearchInput").value.toLowerCase();
+          const movies = document.querySelectorAll(".movie-card");
+          const noResultsMessage = document.getElementById("noResultsMessage");
+
+          let found = false;
+
+          movies.forEach(movie => {
+              const title = movie.querySelector(".card-title").textContent.toLowerCase();
+
+              if (title.includes(input)) {
+                  movie.style.display = "block";
+                  movie.classList.add("search-active");
+                  found = true;
+              } else {
+                  movie.style.display = "none";
+                  movie.classList.remove("search-active");
+              }
+          });
+
+          noResultsMessage.style.display = found ? "none" : "block";
+
+          // all cards if search input is cleared
+          if (input === "") {
+              movies.forEach(movie => {
+                  movie.style.display = "block";
+                  movie.classList.remove("search-active");
+              });
+              noResultsMessage.style.display = "none";
+          }
+      }
+
+      document.getElementById("movieSearchInput").addEventListener("input", searchMovies);
+      </script>
+
+</body>
+</html>
